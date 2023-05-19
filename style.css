@@ -3,6 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+ :root{
+   font-size: 16px;
+ }
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: #2c2c31;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #9e9ea0;
+}
+
+@keyframes enter{
+  from{
+    opacity: 0;
+    transform: translateY(-200px); 
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 body{
   background-color: #121215;
@@ -20,6 +44,7 @@ nav{
   grid-area: timeline;
 
   overflow-y: scroll;
+  animation: enter 1.5s ease-in-out;
 }
 
 .memory{
@@ -32,10 +57,10 @@ nav{
 }
 .memory small{
   color: #bebebf;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .memory h2{
-  font-size: 32px;
+  font-size: 2rem;
   color: #eaeaea;
 }
 .memory img{
@@ -43,10 +68,9 @@ nav{
   height: 280px;
   object-fit: cover;
   border-radius: 8px;
-
 }
 .memory p{
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #bebebf;
   line-height: 28px;
 }
@@ -66,7 +90,10 @@ aside{
 
   border-right: 1px solid ;
   border-image: linear-gradient(#727275, #2c2c31) 1;
-
+  
+}
+aside *{
+  animation: enter 1.5s ease-in-out;
 }
 
 #logo{
@@ -83,12 +110,34 @@ aside{
 }
 
 aside p{
-  font-size: 28px;
+  font-size: 2rem;
   text-align: center;
 
 }
 
 aside span{
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #9e9ea0;
+}
+
+
+@media (max-width:768px){
+  :root{
+    font-size: 12px;
+  }
+  body{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: "profile" "timeline";
+  }
+
+  aside{
+    border-right: none;
+    padding: 32px 12px;
+  }
+  
+  nav{
+    overflow-y: visible;
+    padding: 22px;
+  }
 }
