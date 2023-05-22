@@ -140,4 +140,7 @@ aside span{
     overflow-y: visible;
     padding: 22px;
   }
+  .memory img{
+    object-fit:cover;
+  }
 }
