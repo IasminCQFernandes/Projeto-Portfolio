@@ -34,11 +34,9 @@ body {
   font-family: "Roboto", sans-serif;
 
   display: grid;
-   grid-template-areas: 
-    "profile timeline";
+  grid-template-areas: "profile timeline";
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 100vh;
-  
 }
 
 nav {
@@ -140,6 +138,6 @@ aside span {
     padding: 22px;
   }
   .memory img {
-    object-fit: cover;
+    object-fit: contain;
   }
 }
