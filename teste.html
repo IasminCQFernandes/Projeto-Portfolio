@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src=""></script><link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script>
+      const addTaxa = function(preco){
+        const taxa = 10;
+
+        if(preco >=100){
+          taxa = 5;
+        }
+        preco+=(preco*(taxa/100))
+        return preco
+      }
+      addTaxa(200)
+    </script>
+  </body>
+</html>
